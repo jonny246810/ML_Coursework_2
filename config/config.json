@@ -1,0 +1,45 @@
+{
+  "dataset": {
+    "root": "data",
+    "name": "CIFAR10",
+    "num_classes": 10,
+    "mean": [0.4914, 0.4822, 0.4465],
+    "std": [0.2023, 0.1994, 0.2010]
+  },
+  "feature_extractor": {
+    "model_name": "resnet18",
+    "use_simclr": true,
+    "pretrained": true,
+    "batch_size": 512
+  },
+  "typiclust": {
+    "budget": 50,
+    "max_clusters": 500,
+    "min_cluster_size": 5,
+    "n_neighbors": 20,
+    "random_state": 42,
+    "kmeans_n_init": 10,
+    "minibatch_kmeans_n_init": 3,
+    "noise_threshold": 0.67,
+    "min_samples": 5,
+    "pca_dims": 32
+  },
+  "classifier": {
+    "lr": 2.5,
+    "momentum": 0.9,
+    "epochs": 200,
+    "test_batch_size": 512
+  },
+  "evaluation": {
+    "budgets": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    "learning_curve_filename": "learning_curve.pdf",
+    "learning_curve_modified_filename": "learning_curve_modified.pdf"
+  },
+  "visualization": {
+    "subset_size": 5000,
+    "random_state": 42,
+    "num_clusters_viz": 10,
+    "tsne_filename": "tsne_clusters.pdf",
+    "tsne_modified_filename": "tsne_clusters_modified.pdf"
+  }
+}
