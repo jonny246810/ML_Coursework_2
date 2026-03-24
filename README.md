@@ -62,6 +62,7 @@ Execute src/modified_implementation.ipynb
 | Strong augmentations | RandAugment | Identical | ✓ |
 | Repetitions | 3× averaged | 3× averaged | ✓ |
 | Iterations | 400,000 | 1,000 | ✗ — hardware constraint |
+| Algorithm | FlexMatch | Simplified pseudo-labeling approximation | ✗ — hardware constraint |
 
 # Note on Compute Limits
 Due to hardware constraints, two deviations from the paper were necessary:
