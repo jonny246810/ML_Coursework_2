@@ -71,8 +71,8 @@ Execute src/modified_implementation.ipynb
 | Weak augmentations | Random crop, horizontal flip | Identical | ✓ |
 | Strong augmentations | RandAugment | Identical | ✓ |
 | Repetitions | 3× averaged | 3× averaged | ✓ |
-| Training length | 400,000 iterations | 5 epochs (labeled) + 5 epochs (pseudo) | ✗ — hardware constraint |
-| Algorithm | FlexMatch | Simplified pseudo-labeling approximation | ✗ — hardware constraint |
+| Training length | 400,000 iterations | 1000 | ✗ — hardware constraint |
+| Algorithm | FlexMatch | Flexmatch(simplified)  | ✗ — hardware constraint |
 
 ---
 
@@ -82,6 +82,7 @@ Due to hardware constraints, the following deviations from the paper were necess
 
 - SimCLR backbone trained for **50 epochs** instead of **500**
 - Linear evaluation run for **5 epochs** instead of **200**
-- Semi-supervised evaluation run for **5 + 5 epochs** instead of **400,000 iterations**
+- Semi-supervised evaluation run for **1000** instead of **400,000 iterations**
+
 
 All other hyperparameters match the paper exactly.
