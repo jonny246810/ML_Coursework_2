@@ -72,7 +72,6 @@ Execute src/modified_implementation.ipynb
 | Strong augmentations | RandAugment | Identical | ✓ |
 | Repetitions | 3× averaged | 3× averaged | ✓ |
 | Training length | 400,000 iterations | 1000 | ✗ — hardware constraint |
-| Algorithm | FlexMatch | Flexmatch(simplified)  | ✗ — hardware constraint |
 
 ---
 
